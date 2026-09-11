@@ -13,7 +13,11 @@ class Settings(BaseSettings):
     DATABASE_URL: str = "sqlite:///./myinvest.db"  # Cambiar a PostgreSQL en producción
 
     # CORS
-    BACKEND_CORS_ORIGINS: list[str] = ["http://localhost:3000", "http://127.0.0.1:3000"]
+    BACKEND_CORS_ORIGINS: list[str] = [
+    "http://localhost:3000",
+    "http://127.0.0.1:3000",
+    "https://my-invest-delta.vercel.app",
+]
 
     class Config:
         env_file = ".env"
